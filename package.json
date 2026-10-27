@@ -1,0 +1,48 @@
+{
+  "name": "pi-copy-code-blocks",
+  "version": "0.1.0",
+  "description": "Pi extension: clickable 📋 button under every code block that copies the raw code without terminal artifacts",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "pi-extension",
+    "clipboard",
+    "code-block",
+    "terminal"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yxsa/pi-copy-code-blocks.git"
+  },
+  "homepage": "https://github.com/yxsa/pi-copy-code-blocks#readme",
+  "bugs": {
+    "url": "https://github.com/yxsa/pi-copy-code-blocks/issues"
+  },
+  "pi": {
+    "extensions": [
+      "./extensions/copy-code-blocks.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.8.0"
+  },
+  "scripts": {
+    "dev:setup": "bash scripts/dev-setup.sh",
+    "typecheck": "tsc --noEmit",
+    "test": "bash scripts/verify.sh",
+    "prepublishOnly": "bash scripts/verify.sh"
+  },
+  "files": [
+    "extensions",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ]
+}
